@@ -2,77 +2,42 @@
 
 body{
     margin:0;
-    background-color:#fff;
+    background-color:#32738C;
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
-    
-    
 }
 
-#box_index{
-    background-image:url(background.png);
-    background-repeat: no-repeat;
-    background-position:center center;
-    background-size:cover;
+header{
     width:100%;
-    height:99vh;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom:0;
+    height:100px;
+    top:0;
+    position:fixed;
+    min-height: 30px;
+    margin-top:0px;
+    background-color:#32738C;
+    text-align:center;
 }
 
-#content_index{
-    width:768px;
-    height:90%;
-    
-    display:grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 30% 60% 10%;
-}
-
-#pictures_index{
-    display:flex;
-    justify-content:space-around;
-    align-items: center;
-}
-
-#pictures_index img{
-    width:350px;
-    height:200px;
-}
-
-img{
-    border:5px solid rgb(50, 113, 207);
-}
-
-#pictures_index img:hover{
-    opacity:0.6;
-    cursor:pointer;
-}
-
-.welcome_text{
-    color:rgb(50, 113, 207);
-}
-
-#welcome{
-    border:1px solid rgb(50, 113, 207);
-    padding-left:5px;
-    display:flex;
-    flex-direction:column;
-    justify-content: space-evenly;
+header p{
+    font-family:'odibee_regular';
+    font-size:300%;
+    margin-top:25px;
+    color:#fff;
 }
 
 h2{
-    font-family:'noto_bold';
-    font-size:50px;
-    text-decoration: underline;
+    font-family:'odibee_regular';
+    font-size:380%;
+    
+    margin-top:0px;
+    margin-bottom:0px;
 }
 
 p{
+    margin-top:0px;
     font-family: 'noto_regular';
-    font-size:24px;
+    font-size:150%;
 
 }
 
@@ -80,13 +45,103 @@ a{
     text-decoration: none;
 }
 
+/* -------- box_index & content_index -------- */
+
+#box_index{
+    background-image:url(back2.png);
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size:cover;
+    background-attachment: fixed;
+    width:100%;
+    height:1700px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:0;
+}
+
+#content_index{
+    width:100%;
+    height:90%;
+    display:grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 15% 38% 15% 15% 2%;
+    grid-template-areas: 
+    "p1"
+    "p2"
+    "welcome"
+    "p3"
+    "p4"
+    "b1";
+}
+
+/* -------- pictures & welcome -------- */
+
+.pictures_index{
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.pictures_index img{
+    width:80%;
+    
+}
+
+.pictures_index img:hover{
+    opacity:0.6;
+    cursor:pointer;
+}
+
+#picture1{
+    grid-area:p1;
+}
+
+#picture2{
+    grid-area: p2;
+}
+
+#picture3{
+    grid-area:p3;
+}
+
+#picture4{
+    grid-area:p4;
+}
+
+#welcome{
+    grid-area:welcome;
+    
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    width:100%;
+    margin-top:0px;
+    text-align:justify;
+     
+}
+
+#a_welcome{
+    margin-top:100px;
+    grid-area:b1;
+    justify-self: center;
+    align-self:center;
+}
+
+.welcome_text{
+    color:#fff;  
+    padding:10px;
+}
+
+
 #start_link_a{
-    background-color:rgb(25, 73, 145);
+    background-color:#32738C;
     width:300px;
     height:75px;
     color:white;
     text-align:center;
-    margin-left:230px;
+    
     padding-top:1px;
     
 }
@@ -94,26 +149,35 @@ a{
 #start_link_a:hover{
     cursor:pointer;
     background-color:white;
-    border:1px solid rgb(25, 73, 145);
+    border:1px solid #BFAC95;
     
 }
 
 #start_link_a:hover #start_link{
-    color:rgb(25, 73, 145);
+    color:#BFAC95;
 }
 
 #start_link{
     font-family:'noto_bold';
     color:white;
+    font-size:150%;
+    margin-bottom:0px;
+    margin-top:20px;
+}
+
+#p_back{
+    background-color:#32738C;
+    height:81%;
 }
 
 /* -------- footer -------- */
 footer{
+    
     width:100%;
-    height:1%;
+    height:40px;
     min-height: 30px;
     margin-top:0px;
-    background-color:rgb(25, 73, 145);
+    background-color:#32738C;
     text-align:center;
 }
 
@@ -173,11 +237,32 @@ footer{
     src: url(Aleo-Italic.ttf);
 }
 
-/* 
-rgb(50, 113, 207); jasny niebieski
-rgb(25, 73, 145); ciemny niebieski */
+@font-face {
+    font-family: odibee_regular;
+    src: url(OdibeeSans-Regular.ttf);
+}
 
-/* index, opis uslugi (start, do tego obrazy), oferty, kontakt */
+
+
+/* index, about us   (start, do tego obrazy), oferty, kontakt */
 
 /* przeskalować obrazy do jednej rozdzielczosci */
 /* 1000x626 */
+
+/* blur 
+3 oferty
+ - basic 4x 50$ per hour (bazowe rzeczy dla kazdego itp)
+ - advanced 100% per hour
+ - pro (jakistam dostep do kalkulatorow, bazy z informacjami nt liczb, wykresow itp) */
+
+ /* // Small devices (landscape phones, 576px and up)
+ @media (min-width: 576px) { ... }
+ 
+ // Medium devices (tablets, 768px and up)
+ @media (min-width: 768px) { ... }
+ 
+ // Large devices (desktops, 992px and up)
+ @media (min-width: 992px) { ... }
+ 
+ // Extra large devices (large desktops, 1200px and up)
+ @media (min-width: 1200px) { ... } */
