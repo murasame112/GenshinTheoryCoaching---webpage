@@ -28,3 +28,17 @@ img{
     background-color:#32738C;
     height:100%;
 }
+
+#box{
+    width:1200px;
+    height:1000px;
+    display:grid;
+    grid-template-columns: 100%;
+    grid-template-rows:15% 5% 5% 70% 10%;
+    grid-template-areas:
+    "."
+    "menu"
+    "."
+    "article"
+    ".";
+}

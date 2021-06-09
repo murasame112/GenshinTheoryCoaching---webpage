@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="files/styles.css">
+    <link rel="stylesheet" media="screen and (min-width:768px)" href="files/styles768.css">
+    <link rel="stylesheet" media="screen and (min-width:1200px)" href="files/styles1200.css">
+    <title>Genshin Theory Coaching - About us!</title>
+</head>
+<body>
+    <header><p>Genshin Theory Coaching</p></header>
+    <div id="back">
+        <div id="box">
+            <div id="menu">
+                <div class="menu_a active">
+                    <a href="start.html"><p>About us</p></a>
+                </div>
+                <div class="menu_a">
+                    <a href="services.html"><p>Services</p></a>
+                </div>
+                <div class="menu_a">
+                    <a href="contact.html"><p>Contact</p></a>
+                </div>
+            </div>
+
+            <div id="about">
+                <div>
+                    <h2 class="welcome_text">Genshin Impact - theory coaching</h2>
+                    <p class="welcome_text about_p">Our team offers best coaches to teach you everything you need to know. We will show you how to setup teamcomps, artifacts stats, weapons and how to efficently gain them. Our experts will share calculation-related data with you, so you will be able to compare your progress and development.</p>
+                   
+                </div>
+                <div>
+                    <img class="about_img pic_index" src="files/crit1.png">
+                    <img class="about_img pic_index" src="files/crit1.png">
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <footer>
+        <p id="footer_p">Webpage made by Tomasz Więsek, 13357. I'm also an author of every single screenshot/picture.</p>
+    </footer>
+
+
+    <div class="lightbox">
+        <img alt="" srcset="" id="lightbox-image">
+        
+    </div>
+
+<script type="text/javascript">
+
+const lightbox = document.querySelector('.lightbox');
+
+const bd = document.querySelector('body');
+document.querySelectorAll('.pic_index').forEach(item => {item.addEventListener('click', event => {
+
+
+const lightboxImage = document.querySelector('#lightbox-image');
+lightbox.classList.add('visible');
+lightboxImage.src= item.src;
+bd.classList.add('of_none');
+
+
+})
+});
+
+
+
+lightbox.addEventListener('click', () => closePic());
+
+function closePic(){
+    
+    lightbox.classList.remove('visible');
+    bd.classList.remove('of_none');
+}
+</script>
+</body>
+</html>
