@@ -4,18 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="files/style_index.css">
-    <!-- <link rel="stylesheet" media="screen and (min-width:992px)" href="files/style992.css">
-    <link rel="stylesheet" media="screen and (min-width:1200px)" href="files/style1200.css">
-    <link rel="stylesheet" media="screen and (min-width:1400px)" href="files/style1400.css"> -->
+    <link rel="stylesheet" href="files/styles.css">
+    
+    
     <title>Genshin Theory Coaching - Start!</title>
     
 </head>
 <body>
-    <div id="box">
+    <div id="box_index">
+        <div id="content_index">
 
-        
+            <div id="pictures_index">
+                <img class="pic_index" alt="pic" src="files/crit1.png">
+                <img class="pic_index" alt="pic" src="files/crit2.png">
+            </div>
+
+            <div id="welcome">
+                <h2 class="welcome_text">Welcome, Travelers!</h2>
+                <p class="welcome_text">Have you ever wished to clear Spiral Abyss? To get all rewards from every event solo? To be proud of your characters, when others look at them with admiration?</p>
+                <div id="start_link_a">
+                    <a href="files/start.html" ><p id="start_link">Check out our offer!</p></a>
+                </div>
+            </div>
+
+            
+
+        </div>
     </div>
+        <footer>
+            <p id="footer_p">Webpage made by Tomasz Więsek, 13357</p>
+        </footer>
+
+        <div class="lightbox">
+            <img alt="" srcset="" id="lightbox-image">
+            
+        </div>
+
+<script type="text/javascript">
+
+const lightbox = document.querySelector('.lightbox');
+
+const bd = document.querySelector('body');
+document.querySelectorAll('.pic_index').forEach(item => {item.addEventListener('click', event => {
     
+    
+    const lightboxImage = document.querySelector('#lightbox-image');
+    lightbox.classList.add('visible');
+    lightboxImage.src= item.src;
+    bd.classList.add('of_none');
+    
+    
+})
+});
+
+
+
+lightbox.addEventListener('click', () => closePic());
+
+function closePic(){
+        
+        lightbox.classList.remove('visible');
+        bd.classList.remove('of_none');
+    }
+</script>
 </body>
 </html>
+

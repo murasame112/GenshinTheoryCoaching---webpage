@@ -1,0 +1,182 @@
+/* -------- body & index -------- */
+
+body{
+    margin:0;
+    background-color:#fff;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    
+}
+
+#box_index{
+    background-image:url(background.png);
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size:cover;
+    width:100%;
+    height:99vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:0;
+}
+
+#content_index{
+    width:768px;
+    height:90%;
+    
+    display:grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 30% 60% 10%;
+}
+
+#pictures_index{
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+#pictures_index img{
+    width:350px;
+    height:200px;
+}
+
+img{
+    border:5px solid rgb(50, 113, 207);
+}
+
+#pictures_index img:hover{
+    opacity:0.6;
+    cursor:pointer;
+}
+
+.welcome_text{
+    color:rgb(50, 113, 207);
+}
+
+#welcome{
+    border:1px solid rgb(50, 113, 207);
+    padding-left:5px;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+}
+
+h2{
+    font-family:'noto_bold';
+    font-size:50px;
+    text-decoration: underline;
+}
+
+p{
+    font-family: 'noto_regular';
+    font-size:24px;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+#start_link_a{
+    background-color:rgb(25, 73, 145);
+    width:300px;
+    height:75px;
+    color:white;
+    text-align:center;
+    margin-left:230px;
+    
+}
+
+#start_link_a:hover{
+    cursor:pointer;
+    background-color:white;
+    border:1px solid rgb(25, 73, 145);
+}
+
+#start_link_a:hover #start_link{
+    color:rgb(25, 73, 145);
+}
+
+#start_link{
+    font-family:'noto_bold';
+    color:white;
+    
+}
+
+/* -------- footer -------- */
+footer{
+    width:100%;
+    height:1%;
+    min-height: 30px;
+    margin-top:0px;
+    background-color:rgb(25, 73, 145);
+    text-align:center;
+}
+
+#footer_p{
+    font-size:16px;
+    color:white;
+    font-family:'aleo_italic';
+}
+
+/* -------- lgihtbox -------- */
+
+.lightbox{
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    right:0;
+    bottom:0;
+    left:0;
+    display:none;
+    justify-content: center;
+    align-items:center;
+    cursor: pointer;
+}
+
+.visible{
+    display:flex;
+}
+
+.of_none{
+    overflow:hidden;
+}
+
+#lightbox-image{
+    width:70%;
+    max-width: 1000px;
+}
+
+/* -------- fonts -------- */
+
+@font-face {
+    font-family: noto_regular;
+    src: url(NotoSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: noto_bold;
+    src: url(NotoSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: noto_italic;
+    src: url(NotoSans-Italic.ttf);
+}
+
+@font-face {
+    font-family: aleo_italic;
+    src: url(Aleo-Italic.ttf);
+}
+
+/* 
+rgb(50, 113, 207); jasny niebieski
+rgb(25, 73, 145); ciemny niebieski */
+
+/* index, opis uslugi (start, do tego obrazy), oferty, kontakt */
+
+/* przeskalować obrazy do jednej rozdzielczosci */
+/* 1000x626 */
