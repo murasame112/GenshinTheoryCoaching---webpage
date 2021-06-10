@@ -29,7 +29,7 @@ header p{
 
 h2{
     font-family:'odibee_regular';
-    font-size:380%;
+    font-size:350%;
     
     margin-top:0px;
     margin-bottom:0px;
@@ -90,7 +90,7 @@ a{
     
 }
 
- img:hover{
+#content_index img:hover, #content_index img:active, #contact_pic img:hover, #contact_pic img:active, #about img:hover, #about img:active{
     opacity:0.6;
     cursor:pointer;
 }
@@ -174,7 +174,6 @@ a{
 /* -------- box -------- */
 
 
-
 #back{
     background-image:url(back2.png);
     background-repeat: no-repeat;
@@ -203,17 +202,21 @@ a{
     ".";
 }
 
+
+/* -------- menu -------- */
+
+
 #menu{
     grid-area: menu;
     width:100%;
     background-color:#32738C;
     display:grid;
-    grid-template-columns:33% 33% 33%;
+    grid-template-columns:1fr 1fr 1fr;
     grid-template-rows:100%;
 }
 
 
-.menu_a{
+#menu a{
     text-align: center;
     border:3px solid #2a4155;
 }
@@ -223,12 +226,16 @@ a{
     border:3px solid #A67E5B;
 }
 
-.menu_a a p{
+.menu_a p{
     color:#fff;
     font-family:'odibee_regular';
     font-size:200%;
-
+    
 }
+
+
+/* -------- article, about, contact -------- */
+
 
 article{
     grid-area: article;
@@ -246,7 +253,17 @@ article{
     background-color:#32738C;
     display:grid;
     grid-template-columns: 100%;
-    grid-template-rows:50% 50%;
+    grid-template-rows:45% 55%;
+    
+}
+
+#contact{
+    grid-area: article;
+    width:100%;
+    background-color:#32738C;
+    display:grid;
+    grid-template-columns: 100%;
+    grid-template-rows:40% 30% 30%;
     
 }
 
@@ -292,16 +309,52 @@ article{
 .offer_p{
     margin-top:0px;
     font-family: 'noto_regular';
-    font-size:100%;
-    
+    font-size:100%;   
+}
+
+#info p{
+    font-size:200%;
+    margin-top:0px;
+    font-family: 'noto_regular';
+    color:#fff;
+    padding:7px;
+    text-align:center;  
 }
 
 
+#contact_form form{
+    height:70%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
 
+#contact_form input{
+    width:400px;
+    height:20%;
+    font-family: 'noto_bold';
+    
+}
 
+#contact_form #submit{
+    width:70px;
+    background-color: #BFAC95;
+    border:3px solid #A67E5B;
+    color:#fff;
+    
+}
 
+#contact_form #submit:hover{
+    background-color:#ece4da;
+    color:#000;
+}
 
-
+#contact_pic{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
@@ -337,7 +390,9 @@ footer{
     justify-content: center;
     align-items:center;
     cursor: pointer;
+    
 }
+
 
 .visible{
     display:flex;

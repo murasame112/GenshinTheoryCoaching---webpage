@@ -14,15 +14,15 @@
     <div id="back">
         <div id="box">
             <div id="menu">
-                <div class="menu_a active">
-                    <a href="start.html"><p>About us</p></a>
-                </div>
-                <div class="menu_a">
-                    <a href="services.html"><p>Services</p></a>
-                </div>
-                <div class="menu_a">
-                    <a href="contact.html"><p>Contact</p></a>
-                </div>
+                <a href="start.html" class="active"><div class="menu_a">
+                    <p>About us</p>
+                </div></a>
+                <a href="services.html"><div class="menu_a">
+                    <p>Services</p>
+                </div></a>
+                <a href="contact.html"><div class="menu_a">
+                    <p>Contact</p>
+                </div></a>  
             </div>
 
             <div id="about">
@@ -33,7 +33,7 @@
                 </div>
                 <div>
                     <img class="about_img pic_index" src="files/crit1.png">
-                    <img class="about_img pic_index" src="files/crit1.png">
+                    <img class="about_img pic_index" src="files/crit6.png">
                 </div>
             </div>
         </div>
@@ -51,32 +51,28 @@
         
     </div>
 
-<script type="text/javascript">
+    <script type="text/javascript">
 
-const lightbox = document.querySelector('.lightbox');
+        const lightbox = document.querySelector('.lightbox');
 
-const bd = document.querySelector('body');
-document.querySelectorAll('.pic_index').forEach(item => {item.addEventListener('click', event => {
+        const bd = document.querySelector('body');
+        document.querySelectorAll('.pic_index').forEach(item => {item.addEventListener('click', event => {
+            
+            const lightboxImage = document.querySelector('#lightbox-image');
+            lightbox.classList.add('visible');
+            lightboxImage.src= item.src;
+            bd.classList.add('of_none');
+            
+        })
+        });
 
+        lightbox.addEventListener('click', () => closePic());
 
-const lightboxImage = document.querySelector('#lightbox-image');
-lightbox.classList.add('visible');
-lightboxImage.src= item.src;
-bd.classList.add('of_none');
-
-
-})
-});
-
-
-
-lightbox.addEventListener('click', () => closePic());
-
-function closePic(){
-    
-    lightbox.classList.remove('visible');
-    bd.classList.remove('of_none');
-}
-</script>
+        function closePic(){
+                
+            lightbox.classList.remove('visible');
+            bd.classList.remove('of_none');
+        }
+    </script>
 </body>
 </html>

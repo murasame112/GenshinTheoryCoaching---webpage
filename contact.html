@@ -14,20 +14,42 @@
     <div id="back">
         <div id="box">
             <div id="menu">
-                <div class="menu_a ">
-                    <a href="start.html"><p>About us</p></a>
-                </div>
-                <div class="menu_a">
-                    <a href="services.html"><p>Services</p></a>
-                </div>
-                <div class="menu_a active">
-                    <a href="contact.html"><p>Contact</p></a>
-                </div>
+                <a href="start.html"><div class="menu_a">
+                    <p>About us</p>
+                </div></a>
+                <a href="services.html"><div class="menu_a">
+                    <p>Services</p>
+                </div></a>
+                <a href="contact.html" class="active"><div class="menu_a">
+                    <p>Contact</p>
+                </div></a>  
             </div>
 
-            <article>
+            <div id="contact">
 
-            </article>
+                <div id="info">
+                    <p>name: Tomasz Więsek</p>
+                    <p>index: 13357</p>
+                    <p>mail: theorycoaching@genshin.com</p>
+                </div>
+
+                <div id="contact_form">
+                    <form method="post" action="/start.html">
+                        
+                        <input type="text" id="name" name="name" placeholder="Give us your name"><br>
+                        
+                        <input type="email" id="mail" name="mail" placeholder="Give us your email"><br>
+                        
+                        <input type="text" id="phone" name="phone" placeholder="Give us your phone number"><br><br>
+                        <input type="submit" id="submit" onclick="alert('We will email you soon, thank you!')" value="Submit"> 
+                    </form> 
+                </div>
+                
+                <div id="contact_pic">
+                    <img class="about_img pic_index" src="files/face_message.png" alt="face">
+                </div>
+
+            </div>
         </div>
 
 
@@ -36,5 +58,33 @@
     <footer>
         <p id="footer_p">Webpage made by Tomasz Więsek, 13357. Every picture from this site belongs to me.</p>
     </footer>
+
+    <div class="lightbox">
+        <img alt="" srcset="" id="lightbox-image">
+        
+    </div>
+    <script type="text/javascript">
+
+        const lightbox = document.querySelector('.lightbox');
+
+        const bd = document.querySelector('body');
+        document.querySelectorAll('.pic_index').forEach(item => {item.addEventListener('click', event => {
+            
+            const lightboxImage = document.querySelector('#lightbox-image');
+            lightbox.classList.add('visible');
+            lightboxImage.src= item.src;
+            bd.classList.add('of_none');
+            
+        })
+        });
+
+        lightbox.addEventListener('click', () => closePic());
+
+        function closePic(){
+                
+            lightbox.classList.remove('visible');
+            bd.classList.remove('of_none');
+        }
+    </script>
 </body>
 </html>
