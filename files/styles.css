@@ -18,6 +18,7 @@ header{
     background-color:#32738C;
     text-align:center;
     opacity:1;
+    border-bottom:3px solid #2a4155;
 }
 
 header p{
@@ -67,14 +68,13 @@ a{
     height:90%;
     display:grid;
     grid-template-columns: 100%;
-    grid-template-rows: 15% 15% 38% 15% 15% 2%;
+    grid-template-rows: 14% 11% 53% 12% 12%;
     grid-template-areas: 
     "p1"
     "p2"
     "welcome"
     "p3"
-    "p4"
-    "b1";
+    "p4";
 }
 
 /* -------- pictures & welcome -------- */
@@ -120,14 +120,15 @@ a{
     width:100%;
     margin-top:0px;
     text-align:justify;
+    align-items: center;
      
 }
 
 #a_welcome{
     margin-top:100px;
     grid-area:b1;
-    justify-self: center;
-    align-self:center;
+    
+    
 }
 
 .welcome_text{
@@ -135,16 +136,20 @@ a{
     padding:10px;
 }
 
+#over_a_welcome{
+    display: flex;
+    justify-content: center;
+}
 
 #start_link_a{
     background-color:#32738C;
     width:300px;
     height:75px;
-    color:white;
     text-align:center;
-    
+    background-color:#F2E6D8;
+    border:3px solid #BFAC95;
     padding-top:1px;
-    
+   
 }
 
 #start_link_a:hover{
@@ -160,7 +165,7 @@ a{
 
 #start_link{
     font-family:'noto_bold';
-    color:white;
+    color:#2a4155;
     font-size:150%;
     margin-bottom:0px;
     margin-top:20px;
@@ -193,7 +198,7 @@ a{
     height:1300px;
     display:grid;
     grid-template-columns: 100%;
-    grid-template-rows:15% 5% 5% 70% 10%;
+    grid-template-rows:15% 5% 5% 72% 8%;
     grid-template-areas:
     "."
     "menu"
@@ -236,6 +241,9 @@ a{
 
 /* -------- article, about, contact -------- */
 
+#offer_main{
+    display:none;
+}
 
 article{
     grid-area: article;
@@ -243,8 +251,8 @@ article{
     background-color:#32738C;
     display:grid;
     grid-template-columns: 100%;
-    grid-template-rows:33% 33% 33%;
-    
+    grid-template-rows:1fr 1fr 1fr;
+    border:3px solid #2a4155;
 }
 
 #about{
@@ -253,8 +261,8 @@ article{
     background-color:#32738C;
     display:grid;
     grid-template-columns: 100%;
-    grid-template-rows:45% 55%;
-    
+    grid-template-rows:45% 27% 27%;
+    border:3px solid #2a4155;
 }
 
 #contact{
@@ -263,8 +271,8 @@ article{
     background-color:#32738C;
     display:grid;
     grid-template-columns: 100%;
-    grid-template-rows:40% 30% 30%;
-    
+    grid-template-rows:30% 30% 30%;
+    border:3px solid #2a4155;
 }
 
 #about div{
@@ -283,6 +291,10 @@ article{
     font-size:125%;
     margin-top:0px;
     font-family: 'noto_regular';
+}
+
+#best{
+    font-family: 'noto_bold';
 }
 
 .offer{
@@ -312,13 +324,17 @@ article{
     font-size:100%;   
 }
 
+.offer_pic{
+    display:none;
+}
+
 #info p{
     font-size:200%;
     margin-top:0px;
     font-family: 'noto_regular';
     color:#fff;
-    padding:7px;
-    text-align:center;  
+    padding:3px;
+    text-align: center;
 }
 
 
@@ -356,13 +372,19 @@ article{
     align-items: center;
 }
 
+.contact_img{
+    width:90%;
+    border:4px solid #1e597e;
+  
+}
+
 
 
 
 
 /* -------- footer -------- */
 footer{
-    
+    border-top:3px solid #2a4155;
     width:100%;
     height:40px;
     min-height: 30px;

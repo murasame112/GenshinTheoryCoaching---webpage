@@ -12,14 +12,14 @@
     "p1 p2"
     "welcome p3"
     "welcome p4"
-    "b1 b1";
+    ". .";
 }
 
 img{
     border:5px solid #32738C;
 }
 
-.pictures_index img{
+.pictures_index img, .about_img{
     width:95%;
     
 }
@@ -41,4 +41,80 @@ img{
     "."
     "article"
     ".";
+}
+
+#about{
+ 
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows:50% 50%;
+    grid-template-areas: 
+    "ab_txt ab_txt"
+    "ab_pic1 ab_pic2";
+}
+
+#ab_txt{
+    grid-area:ab_txt;
+}
+
+#ab_pic1{
+    grid-area:ab_pic1;
+}
+
+#ab_pic2{
+    grid-area:ab_pic2;
+}
+
+
+article{
+    grid-area: article;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:20% 80%;
+    grid-template-areas:
+    "of_main of_main of_main"
+    "of1 of2 of3";
+}
+
+#offer_main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: of_main;
+    padding-top:60px;
+}
+
+#offer1{
+    grid-area:of1;
+}
+
+#offer2{
+    grid-area:of2;
+}
+
+#offer3{
+    grid-area:of3;
+}
+
+.offer{
+    height:80%;
+}
+
+.offer_pic{
+    display:flex;
+    justify-content: center;
+}
+
+.offer_pic img{
+    border:0;
+}
+
+
+#offer_main_p{
+    font-size:350%;
+    
+}
+
+.contact_img{
+    width:45%;
 }
