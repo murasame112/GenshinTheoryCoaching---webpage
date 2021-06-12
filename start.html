@@ -45,7 +45,7 @@
 
     </div>
     <footer>
-        <p id="footer_p">Webpage made by Tomasz Więsek, 13357. I'm also an author of every single screenshot/picture.</p>
+        <p id="footer_p">Webpage made by Tomasz Więsek, 13357. I'm also an author of every single screenshot/picture (which comes from game Genshin Impact).</p>
     </footer>
 
 
@@ -105,13 +105,8 @@
                     x2=Math.floor(Math.random() * num) + 1;
                 }while(x2==p1_src||x2==p2_src||x2==x1);
             }
-           
             p1.classList.toggle('roll_picture');
             p2.classList.toggle('roll_picture');
-
-
-
-            
             setTimeout(() => {   
                 p1.src="files/crit"+x1+".png";
                 p1.classList.toggle('roll_picture');             
@@ -120,8 +115,7 @@
                 p2.src="files/crit"+x2+".png";
                 p2.classList.toggle('roll_picture');
                 
-            }, 2000);
-            
+            }, 1500);
             
             
         })

@@ -343,6 +343,7 @@ article{
     color:#fff;
     padding:3px;
     text-align: center;
+    word-break: break-all;
 }
 
 
@@ -355,7 +356,7 @@ article{
 }
 
 #contact_form input{
-    width:400px;
+    width:200px;
     height:20%;
     font-family: 'noto_bold';
     
@@ -420,11 +421,9 @@ footer{
     transform: rotateY(360deg); 
 }
 
-.roll_further{
-    transition: transform 1.5s;
-    transform-origin: 50% 50%;
-    transform: rotateY(270deg); 
-}
+
+
+
 
 /* -------- lightbox -------- */
 

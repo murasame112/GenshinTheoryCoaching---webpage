@@ -118,3 +118,7 @@ article{
 .contact_img{
     width:45%;
 }
+
+#contact_form input{
+    width:400px;
+}
