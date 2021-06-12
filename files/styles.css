@@ -284,6 +284,23 @@ article{
     font-family: 'noto_regular';
 }
 
+#btn_change{
+    width:138px;
+    height:56px;
+    border:0px;
+    background-color:transparent;
+    background-image: url('button_change.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+    color:#fff;
+    font-family: 'noto_bold';
+}
+
+#btn_change:hover, #btn_change:active{
+    cursor:pointer;
+    opacity:0.8;
+}
+
 #best{
     font-family: 'noto_bold';
 }
@@ -345,16 +362,21 @@ article{
 }
 
 #contact_form #submit{
-    width:70px;
-    background-color: #BFAC95;
-    border:3px solid #A67E5B;
+    width:138px;
+    height:56px;
+    border:0px;
+    background-color:transparent;
+    background-image: url('button_submit.png');
+    background-repeat:no-repeat;
+    background-size:cover;
     color:#fff;
+    font-family: 'noto_bold';
     
 }
 
-#contact_form #submit:hover{
-    background-color:#ece4da;
-    color:#000;
+#contact_form #submit:hover, #contact_form #submit:active{
+    cursor:pointer;
+    opacity:0.8;
 }
 
 #contact_pic{
@@ -448,9 +470,6 @@ footer{
 }
 
 
-
-
-/* blur 
 
 /* design guzika "change pictures"
 
