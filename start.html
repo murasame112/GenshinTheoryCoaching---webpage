@@ -32,10 +32,10 @@
                     <button id="btn_change"></button>
                 </div>
                 <div id="ab_pic1">
-                    <img class="about_img pic_index" src="files/crit1.png">
+                    <img class="about_img pic_index" id="pic_chg1" src="files/crit1.png">
                 </div>
                 <div id="ab_pic2">
-                    <img class="about_img pic_index" src="files/crit6.png">
+                    <img class="about_img pic_index" id="pic_chg2" src="files/crit6.png">
                 </div>
                 
             </div>
@@ -57,6 +57,10 @@
     <script type="text/javascript">
 
         const lightbox = document.querySelector('.lightbox');
+        const btn_chg = document.querySelector('#btn_change');
+        const p1 = document.querySelector('#pic_chg1');
+        const p2 = document.querySelector('#pic_chg2');
+        var num = 6;//number of pictures
 
         const bd = document.querySelector('body');
         document.querySelectorAll('.pic_index').forEach(item => {item.addEventListener('click', event => {
@@ -76,6 +80,54 @@
             lightbox.classList.remove('visible');
             bd.classList.remove('of_none');
         }
+
+        
+        btn_chg.addEventListener('click',()=>{
+            
+            
+            var x1,x2;
+            x1=Math.floor(Math.random() * num) + 1;
+            x2=Math.floor(Math.random() * num) + 1;
+            
+            var p1_src = p1.src.slice(-5,-4);
+            var p2_src = p2.src.slice(-5,-4);
+            x1=Math.floor(Math.random() * num) + 1;
+
+            
+            if(x1==p1_src||x1==p2_src){
+                do{
+                    x1=Math.floor(Math.random() * num) + 1;
+                    
+                }while(x1==p1_src||x1==p2_src);
+            }
+            if(x2==p1_src||x2==p2_src||x2==x1){
+                do{
+                    x2=Math.floor(Math.random() * num) + 1;
+                }while(x2==p1_src||x2==p2_src||x2==x1);
+            }
+           
+            p1.classList.toggle('roll_picture');
+            p2.classList.toggle('roll_picture');
+
+
+
+            
+            setTimeout(() => {   
+                p1.src="files/crit"+x1+".png";
+                p1.classList.toggle('roll_picture');             
+
+
+                p2.src="files/crit"+x2+".png";
+                p2.classList.toggle('roll_picture');
+                
+            }, 2000);
+            
+            
+            
+        })
+
+
+
     </script>
 </body>
 </html>

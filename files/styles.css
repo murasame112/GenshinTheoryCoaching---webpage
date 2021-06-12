@@ -412,7 +412,21 @@ footer{
     font-family:'aleo_italic';
 }
 
-/* -------- lgihtbox -------- */
+/* -------- animation classes -------- */
+
+.roll_picture{
+    transition: transform 2s;
+    transform-origin: 50% 50%;
+    transform: rotateY(360deg); 
+}
+
+.roll_further{
+    transition: transform 1.5s;
+    transform-origin: 50% 50%;
+    transform: rotateY(270deg); 
+}
+
+/* -------- lightbox -------- */
 
 .lightbox{
     background-color: rgba(0, 0, 0, 0.6);
@@ -471,10 +485,9 @@ footer{
 
 
 
-/* design guzika "change pictures"
+
 
 /* animacje (zapisalem sobie na discordzie)
 
 /* porobic sobie obrazy
 
-/* wymyslic obrazy do ofert
