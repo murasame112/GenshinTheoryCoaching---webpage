@@ -117,10 +117,10 @@ a{
     display:flex;
     flex-direction:column;
     justify-content: space-evenly;
+    align-items: center;
     width:100%;
     margin-top:0px;
     text-align:justify;
-    align-items: center;
      
 }
 
@@ -136,44 +136,35 @@ a{
     padding:10px;
 }
 
-#over_a_welcome{
-    display: flex;
-    justify-content: center;
-}
 
-#start_link_a{
-    background-color:#32738C;
-    width:300px;
-    height:75px;
-    text-align:center;
-    background-color:#F2E6D8;
-    border:3px solid #BFAC95;
-    padding-top:1px;
+#welcome_button{
+    height:50px;
+    width:138px;
+    background-color: Transparent;
+    border:0;
+    background-image:url('button_achi.png');
+    background-repeat:no-repeat;
+    transition-property: height;
+    transition-duration: 1s;
+    transition-delay: 0s;
+    
+    background-size:cover;
    
 }
 
-#start_link_a:hover{
-    cursor:pointer;
-    background-color:white;
-    border:1px solid #BFAC95;
+#welcome_button:hover, #welcome_button:active{
     
-}
-
-#start_link_a:hover #start_link{
-    color:#BFAC95;
-}
-
-#start_link{
-    font-family:'noto_bold';
-    color:#2a4155;
-    font-size:150%;
-    margin-bottom:0px;
-    margin-top:20px;
+    cursor:pointer;
+    height:85px;
 }
 
 #p_back{
     background-color:#32738C;
     height:81%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 /* -------- box -------- */
