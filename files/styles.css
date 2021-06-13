@@ -421,7 +421,66 @@ footer{
     transform: rotateY(360deg); 
 }
 
+.offer:hover .offer_pic img{
+    animation-name: wave;
+    animation-duration: 1.5s;
+    
+    animation-iteration-count: infinite;
+}
 
+@keyframes wave {
+    0% {
+      transform: scale(1);
+    }
+    6.25%{
+        transform:scale(0.95);
+    }
+    12.5%{
+        transform:scale(0.9);
+    }
+    18.75%{
+        transform:scale(0.85);
+    }
+    25%{
+        transform:scale(0.8);
+    }
+    31.25%{
+        transform:scale(0.85);
+    }
+    37.5%{
+        transform:scale(0.9);
+    }
+    43.75%{
+        transform:scale(0.95);
+    }
+    50%{
+        transform:scale(1);
+    }
+    56.25%{
+        transform:scale(1.05);
+    }
+    62.5%{
+        transform:scale(1.1);
+    }
+    68.75%{
+        transform:scale(1.15);
+    }
+    75%{
+        transform:scale(1.2);
+    }
+    81.25%{
+        transform:scale(1.15);
+    }
+    87.5% {
+      transform: scale(1.1);
+    }
+    93.75%{
+        transform:scale(1.05);
+    }
+    100%{
+        transform:scale(1);
+    }
+  }
 
 
 

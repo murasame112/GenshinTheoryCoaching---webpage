@@ -34,14 +34,14 @@
                 </div>
 
                 <div id="contact_form">
-                    <form method="post" action="/start.html">
+                    <form method="post" target="_blank" action="">
                         
                         <input type="text" id="name" name="name" placeholder="Give us your name"><br>
                         
                         <input type="email" id="mail" name="mail" placeholder="Give us your email"><br>
                         
                         <input type="text" id="phone" name="phone" placeholder="Give us your phone number"><br><br>
-                        <input type="submit" id="submit" onclick="alert('We will email you soon, thank you!')" value=""> 
+                        <input type="submit" id="submit" onclick="subm()" value=""> 
                     </form> 
                 </div>
                 
@@ -84,6 +84,11 @@
                 
             lightbox.classList.remove('visible');
             bd.classList.remove('of_none');
+        }
+
+        function subm(){
+            alert('We will email you soon, thank you!');
+            window.location.replace("start.html");
         }
     </script>
 </body>
