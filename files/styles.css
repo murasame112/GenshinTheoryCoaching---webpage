@@ -19,6 +19,7 @@ header{
     text-align:center;
     opacity:1;
     border-bottom:3px solid #2a4155;
+    z-index:500;
 }
 
 header p{
