@@ -337,6 +337,10 @@ article{
     display:none;
 }
 
+.offer .offer_pic img{
+    border:4px solid #A67E5B;
+}
+
 #info p{
     font-size:200%;
     margin-top:0px;
